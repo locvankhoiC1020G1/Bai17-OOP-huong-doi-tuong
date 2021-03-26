@@ -1,20 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html>circle
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="circle.js"></script>
 </head>
 <body>
-<canvas id="hihi" width="400px" height="400px" style="border: 1px solid black;"></canvas>
+<canvas id="mycanvas" width="400px" height="400px" style="border: 1px solid black; background-color: #787878"></canvas>
 <script>
-function veHinhTron() {
-    let ctx = document.getElementById("hihi").getContext("2d");
-    let hinhtron = new Circle(40,60,20);
-    ctx.beginPath();
-    ctx.arc(hinhtron.x, hinhtron.y, hinhtron.radius, 0, 2, Math.PI);
-    ctx.fill;
-}
-veHinhTron();
+let giay = document.getElementById("mycanvas");
+let pen = giay.getContext("2d");
+let tron = new Circle(40,50, 30,'red');
+tron.createCircle();
 </script>
 </body>
 </html>

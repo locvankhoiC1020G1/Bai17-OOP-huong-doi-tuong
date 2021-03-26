@@ -1,4 +1,4 @@
-class Diem {
+class hocSinh {
     constructor() {
         this.Toan = Math.random(1,10);
         this.Hoa = Math.random(1,10);

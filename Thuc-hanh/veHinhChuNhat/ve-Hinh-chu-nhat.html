@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="chunhat.js"></script>
+</head>
+<body>
+<canvas id="canvas1" width="400px" height="400px" style="border: 1px solid black "></canvas>
+</body>
+<script>
+    let giay = document.getElementById('canvas1');
+    let pen = giay.getContext('2d');
+    let hcn = new ChuNhat(40, 50, 20,30,"black");
+    hcn.create();
+</script>
+</html>
