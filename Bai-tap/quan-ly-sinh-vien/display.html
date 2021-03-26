@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
-    let students = [];
+<style>
+    table {
+        width: 40%;
+        float: left;
+        border: 1px solid black;
+    }
 
+    td, tr {
+        border: 1px solid black;;
+    }
+</style>
+<body>
+<table id="hienthihocvien" cellspacing="0"></table>
+<script>
+    let hocvien1 = ['khoi', 3, 4, 5];
+    let hocvien2 = ['khoi2', 2, 1, 3];
+    let hocvien3 = ['khoi3', 1, 1, 3];
+    let hocviens = [hocvien1, hocvien2, hocvien3];
+
+    function hienThiHocVien() {
+        let text = '';
+        for (let i = 0; i < hocviens.length; i++) {
+            text += '<tr>';
+            text += '<td>' + hocviens[i][0] + '</td>';
+            text += '<td>' + hocviens[i][1] + '</td>';
+            text += '<td>' + hocviens[i][2] + '</td>';
+            text += '<td>' + hocviens[i][3] + '</td>';
+            text += '<td>' +'<button onclick ="themHocVien()" >Thêm Học Viên</button>' +'</td>';
+            text += '<td>' + '<button onclick ="xoaHocVien()">Xóa học viên</button>' +'</td>';
+            text += '<tr>';
+        }
+        document.getElementById('hienthihocvien').innerHTML = text;
+
+    }
+    hienThiHocVien();
+    function themHocVien(){
+let ten = prompt('Tên học viên');
+let toan = +prompt('Điểm toán');
+let ly = +prompt('Điểm Lý');
+let hoa = +prompt('Điểm Hóa');
+let hocvien = [ten,toan,ly,hoa];
+hocviens.push(hocvien);
+hienThiHocVien();
+    }
+    function xoaHocVien(){
+
+    }
 </script>
 </body>
 </html>
